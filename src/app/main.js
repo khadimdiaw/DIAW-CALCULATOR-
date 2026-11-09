@@ -15,7 +15,7 @@ let history = [];
 app.innerHTML = `
   <header class="app-header">
     <div>
-      <div class="brand">DIAW <span>CALCULATOR</span></div>
+      <div class="brand"><img src="/images/diaw-calculator-logo.png" alt="DIAW CALCULATOR" class="brand-logo"></div>
       <div class="version">SCIENTIFIC CALCULATOR · 2.0</div>
     </div>
     <div class="header-status">MODE SCIENTIFIQUE</div>
