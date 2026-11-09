@@ -1,0 +1,200 @@
+.calculator-display {
+  padding: 22px 20px 18px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #222a35, #171c24);
+  border: 1px solid #3a4655;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.display-toolbar,
+.display-actions,
+.keypad-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.display-label,
+.keypad-heading {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+.angle-controls {
+  display: flex;
+  background: #11161d;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.angle-button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 11px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.angle-button.active {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 2px 8px rgba(40,127,229,.3);
+}
+
+.display-expression {
+  min-height: 48px;
+  margin-top: 24px;
+  text-align: right;
+  font-size: clamp(21px, 5.5vw, 27px);
+  color: #aeb9c7;
+  overflow-wrap: anywhere;
+}
+
+.display-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #465363, transparent);
+  margin: 12px 0;
+}
+
+.display-result-label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.display-result {
+  text-align: right;
+  font-size: clamp(34px, 9vw, 48px);
+  font-weight: 750;
+  letter-spacing: -1px;
+  color: #ffffff;
+  overflow-wrap: anywhere;
+  margin: 7px 0 18px;
+}
+
+.display-actions {
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.display-actions button {
+  background: #252e39;
+  border: 1px solid #3b4858;
+  border-radius: 9px;
+  color: #c0cad6;
+  padding: 9px 13px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.display-actions button:active {
+  background: var(--surface-3);
+}
+
+.keypad-section {
+  margin-top: 26px;
+}
+
+.keypad-heading {
+  margin-bottom: 13px;
+}
+
+.keypad-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 13px;
+  padding: 4px;
+  background: #171d25;
+  border: 1px solid #303b48;
+  border-radius: 13px;
+}
+
+.keypad-tab {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 9px;
+  padding: 11px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.keypad-tab.active {
+  color: white;
+  background: linear-gradient(135deg, #287fe5, #2368b8);
+  box-shadow: 0 3px 10px rgba(40,127,229,.25);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.calc-key {
+  min-width: 0;
+  min-height: 61px;
+  border: 1px solid #3a4654;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #303946, #232b35);
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 650;
+  box-shadow: 0 4px 9px rgba(0,0,0,.18);
+  transition: transform .12s ease, background .12s ease;
+}
+
+.calc-key:active {
+  transform: scale(.95);
+  background: #3b4858;
+}
+
+.calc-key.operator {
+  background: linear-gradient(145deg, #263f59, #1d3045);
+  color: var(--blue-light);
+  border-color: #385675;
+}
+
+.calc-key.function {
+  background: linear-gradient(145deg, #293747, #202a36);
+  color: #9bcaff;
+  font-size: 17px;
+}
+
+.calc-key.equals {
+  background: linear-gradient(145deg, #348ff0, #216bc2);
+  color: white;
+  border-color: #4299f5;
+  box-shadow: 0 4px 14px rgba(40,127,229,.25);
+}
+
+@media (max-width: 360px) {
+  .calculator-display {
+    padding: 17px 14px;
+  }
+
+  .calc-key {
+    min-height: 54px;
+    font-size: 17px;
+    border-radius: 11px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .calc-key.function {
+    font-size: 15px;
+  }
+}

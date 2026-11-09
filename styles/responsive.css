@@ -1,0 +1,28 @@
+@media (min-width: 700px) {
+  .calculator-display {
+    padding: 26px;
+  }
+
+  .calc-key {
+    min-height: 68px;
+    font-size: 21px;
+  }
+
+  .keypad {
+    gap: 12px;
+  }
+}
+
+@media (max-height: 720px) {
+  .calculator-display {
+    min-height: 190px;
+  }
+
+  .calc-key {
+    min-height: 51px;
+  }
+
+  .keypad-section {
+    margin-top: 18px;
+  }
+}
